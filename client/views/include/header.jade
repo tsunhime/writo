@@ -1,0 +1,23 @@
+template(name="header")
+    h1 Writo
+    
+      button.btn.btn-default.like-right(type="button") 
+        +loginButtons
+        
+      +if currentUser
+        div.dropdown.like-right
+          button.btn.btn-default.dropdown-toggle(type="button", id="dropdownMenu1", data-toggle="dropdown", aria-haspopup="true", aria-expeanded="true") New
+            span.caret
+          ul.dropdown-menu
+            li: a(href="#") Book
+            
+        div.dropdown.like-right
+          button.btn.btn-default.dropdown-toggle(type="button", id="dropdownMenu1", data-toggle="dropdown", aria-haspopup="true", aria-expeanded="true") Notifcations
+            span.caret
+          ul.dropdown-menu
+            
+        button.btn.btn-default.like-left(type="button") Releases
+        
+      div.col-xs-3.like-right
+        input.form-control(type="text", placeholder="Search...")
+    hr
